@@ -1,0 +1,14 @@
+algorithme de maillage : ALGORITHME DELAUNEY
+trangulation
+
+diagraM DE VORONOI
+hexagonal (les abeilles)
+
+region de VORONOI
+polyedre
+3D
+
+trangulation par algorithme CRUST
+appliquer DELAUNEY sur un nouveau diagram 
+
+NB: chaque triangle doit contenir au moin un point de depart

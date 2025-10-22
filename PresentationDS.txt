@@ -1,0 +1,43 @@
+projet 4: evapotranspiration bleue:
+	la repartition d'eau en tunisie : rojet4/ITES-eau2050.pdf
+	surface agricole utilisee en tunisie : projet4/PRo39984.pdf
+	la quantite produite de vegitation en tunisie : Production recolte.csv :: https://www.ins.tn/statistiques/46#
+	l'ETp (images satilitaires) : https://browser.dataspace.copernicus.eu/?zoom=9&lat=35.74428&lng=9.8616&themeId=AGRICULTURE&visualizationUrl=U2FsdGVkX1%2BpuJX7DXj26v%2FRY%2FnHPe0lCB5RSi1w1nxxFRdyjT3RAZGXAghE9yW5owXnc7NvXfGKD3KrMfHTw6iQEbw9RxnP%2F1BzPVu2ph2YVtQD9jv2ll0TQT6yFY2F&datasetId=S2_L2A_CDAS&fromTime=2016-11-02T00%3A00%3A00.000Z&toTime=2016-11-02T23%3A59%3A59.999Z&layerId=9_MOISTURE-STRESS&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE
+	precipitation data 2014 -2015 : https://code.earthengine.google.com/?scriptPath=Examples%3ADatasets%2FNASA%2FNASA_GLDAS_V021_NOAH_G025_T3H&hl=fr
+	vegitation : https://browser.dataspace.copernicus.eu/?zoom=10&lat=35.91575&lng=9.91585&themeId=AGRICULTURE&visualizationUrl=U2FsdGVkX1992ANq4ylHMm%2BxLxBWK1a3vXLj2wb3AKVaeAHSRoxmbLMheKOBsnq%2BielDFHkqnd5tuVLjZY0g5KJHV2m9yDScpFvY%2FnugtWpulO1aiJ67LWGjx6q2Nwf%2F&datasetId=S2_L2A_CDAS&fromTime=2016-11-02T00%3A00%3A00.000Z&toTime=2016-11-02T23%3A59%3A59.999Z&layerId=SAVI&demSource3D=%22MAPZEN%22&cloudCoverage=30&dateMode=SINGLE
+	
+	La formule de 'evapotranspiration : https://www.campbellsci.fr/blog/evapotranspiration-101
+	ASCE L'équation normalisée d'évapotranspiration référence
+	
+	IMAGE URI : projet4/formule_evapotranspiration.webp
+
+	
+		ETSZ = l'équation normalisée de référence de l'évapotranspiration des cultures pour un couvert de petite hauteur
+		 (	ETos) ou de grande taille (ETrs) (en mm d-1 pour les données journalières ou en mm h-1 pour les données 
+			 horaires),
+		Rn = le rayonnement net de la surface du couvert végétal calculé (en MJ m-2 d-1 pour les données journalières ou en MJ
+			m-2 h-1 pour les données horaires),
+		G = le flux de chaleur du sol à la surface du sol (en MJ m-2 d-1 pour les données journalières ou en MJ m-2 h-1 pour
+		 les données horaires),
+		T = la température moyenne de l'air tous les jours ou toutes les heures à une hauteur de 1,5 à 2,5-m (°C),
+		u2 = la vitesse moyenne du vent journalière ou horaire à une hauteur de 2 m (m s-1),
+		es = la pression de vapeur saturante à 1,5 à 2,5-m de haut (kPa), calcul des intervalles de temps quotidien comme la
+		 moyenne de la pression de vapeur saturante à la température maximale et minimale de l'air,
+		ea = la moyenne de pression de vapeur réelle à 1,5 à 2,5-m de haut (kPa),
+		Δ = la pente de la courbe pression-température de vapeur saturante (kPa °C-1),
+		γ = la constante psychométrique (kPa °C-1),
+		Cn = la constante du numérateur qui change avec le type de référence et du calcul du pas de temps (K mm s3 Mg-1 d-1 ou 
+		K mm s3 Mg-1 h-1) 
+		Cd = la constante du dénominateur qui change avec le type de référence et du calcul du pas de temps (s m-1).
+
+		l'unité du coefficient 0,408 est en m2 mm MJ-1
+	
+	
+	papier de madame Dorsaf sbai:
+	Papier.pdf
+	
+	Awe : agricutural water use efficency
+	Awp1 : agricultural water productivity irrigated
+	Awp2 : agricultural water productivity
+	
+	
