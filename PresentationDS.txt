@@ -41,3 +41,10 @@ projet 4: evapotranspiration bleue:
 	Awp2 : agricultural water productivity
 	
 	
+	structuration des resulats analysees en tableaux
+	awe
+	awp1 
+	awp2
+	avec des plots
+	WaPOR 
+	

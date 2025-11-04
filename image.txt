@@ -12,3 +12,7 @@ trangulation par algorithme CRUST
 appliquer DELAUNEY sur un nouveau diagram 
 
 NB: chaque triangle doit contenir au moin un point de depart
+
+maillage3D:
+un manifold de dimension n est un espace ou chaque point dispose d'un voisinage (o)
+
