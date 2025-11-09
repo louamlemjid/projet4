@@ -48,3 +48,63 @@ projet 4: evapotranspiration bleue:
 	avec des plots
 	WaPOR 
 	
+	
+	
+
+import ee
+import re
+import requests
+import numpy as np
+import matplotlib.pyplot as plt
+from osgeo import gdal
+
+base_url = f"https://data.apps.fao.org/gismgr/api/v2/catalog/workspaces/WAPOR-3/mapsets"
+
+
+
+def collect_responses(url, info = ["code"]):
+    data = {"links": [{"rel": "next", "href": url}]}
+    output = list()
+    while "next" in [x["rel"] for x in data["links"]]:
+        url_ = [x["href"] for x in data["links"] if x["rel"] == "next"][0]
+        response = requests.get(url_)
+        response.raise_for_status()
+        data = response.json()["response"]
+        if isinstance(info, list):
+            output += [tuple(x.get(y) for y in info) for x in data["items"]]
+        else:
+            output += data["items"]
+    if isinstance(info, list):
+        output = sorted(output)
+    return output
+
+
+
+all_mapsets = collect_responses(base_url, info = ["code", "caption"])
+
+all_mapsets
+
+
+
+mapset_code = "L1-AETI-M"
+mapset_url = f"{base_url}/{mapset_code}/rasters"
+all_rasters = collect_responses(mapset_url, info = ["code", "downloadUrl"])
+all_rasters
+
+
+
+tif_url = all_rasters[1][1]
+bounding_box = [7.0, 38.0, 12.0, 29.5]
+
+bands = [1]
+output_filepath = r"example_subset.tif"
+
+translate_options = gdal.TranslateOptions(projWin=bounding_box, bandList=bands, unscale = True)
+
+ds = gdal.Translate(output_filepath, f"/vsicurl/{tif_url}", options = translate_options)
+
+band = ds.GetRasterBand(1)
+array = band.ReadAsArray().astype(float)
+array[array == band.GetNoDataValue()] = np.nan
+plt.imshow(array)
+	
