@@ -1,0 +1,10 @@
+m49,VariableGroup,Subgroup,Variable,Area,Year,Value,Unit,Symbol,IsAggregate
+788,Water use,Pressure on water resources,Agricultural water withdrawal as % of total renewable water resources,Tunisia,2019,63.553629469,%,E,false
+788,Water use,Pressure on water resources,SDG 6.4.1. Industrial Water Use Efficiency,Tunisia,2019,169.871972183,US$/m3,E,false
+788,Water use,Pressure on water resources,SDG 6.4.1. Irrigated Agriculture Water Use Efficiency,Tunisia,2019,0.316437185,US$/m3,E,false
+788,Water use,Pressure on water resources,SDG 6.4.1. Services Water Use Efficiency,Tunisia,2019,37.527674268,US$/m3,E,false
+788,Water use,Pressure on water resources,SDG 6.4.1. Water Use Efficiency,Tunisia,2019,11.44371641,US$/m3,I,false
+788,Water use,Pressure on water resources,SDG 6.4.2. Agricultural Sector Contribution to Water Stress,Tunisia,2019,73.558398782,%,E,false
+788,Water use,Pressure on water resources,SDG 6.4.2. Industrial Sector Contribution to Water Stress,Tunisia,2019,1.700395308,%,E,false
+788,Water use,Pressure on water resources,SDG 6.4.2. Municipal Sector Contribution to Water Stress,Tunisia,2019,21.051796774,%,E,false
+788,Water use,Pressure on water resources,SDG 6.4.2. Water Stress,Tunisia,2019,96.310590864,%,E,false
